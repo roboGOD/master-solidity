@@ -36,4 +36,38 @@ contract MyContract {
   function valueCount() public view returns (uint) {
     return stringArray.length;
   }
+
+  // Mappings: key => value
+  mapping(uint => string) public names;
+
+  constructor() public {
+    mappingInit();
+  } 
+
+  function mappingInit() private {
+    names[101] = "roboGOD";
+    names[102] = "Jack Napier";
+    names[103] = "Arthur Fleck";
+  }
+
+  // Mapping of custom data types
+  struct Book {
+    uint id;
+    string title;
+    string author;
+  }
+
+  mapping(uint => Book) public books;
+
+  function addBook(uint _id, string memory _title, string memory _author) public {
+    books[_id] = Book(_id, _title, _author);
+  }
+
+  // Nested Mapping
+  mapping(address => mapping(uint => Book)) public myBooks;
+
+  // Add book to only my address
+  function addMyBook(uint _id, string memory _title, string memory _author) public {
+    myBooks[msg.sender][_id] = Book(_id, _title, _author);
+  }
 }

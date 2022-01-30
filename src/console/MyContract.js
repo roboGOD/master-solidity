@@ -17,3 +17,11 @@ await myContract.addValue('orange');
 let strArrayLen = (await myContract.valueCount()).toNumber();
 // read last element of array
 await myContract.stringArray(strArrayLen-1);
+
+// Mappings
+await myContract.names(101);
+await myContract.addBook(101, "12 Rules for Life", "Jordan Peterson");
+await myContract.addBook(102, "Atomic Habits", "James Clear");
+await myContract.addMyBook(101, "Psychology of Money", "Morgan Housel");
+(await myContract.books(101)).title;
+(await myContract.myBooks(accounts[0], 101)).title;
