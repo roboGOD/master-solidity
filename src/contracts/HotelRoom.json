@@ -1,0 +1,2819 @@
+{
+  "contractName": "HotelRoom",
+  "abi": [
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "_occupant",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_value",
+          "type": "uint256"
+        }
+      ],
+      "name": "Occupy",
+      "type": "event"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address payable",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "book",
+      "outputs": [],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "checkout",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"_occupant\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_value\",\"type\":\"uint256\"}],\"name\":\"Occupy\",\"type\":\"event\"},{\"constant\":false,\"inputs\":[],\"name\":\"book\",\"outputs\":[],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"checkout\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address payable\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/HotelRoom.sol\":\"HotelRoom\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/HotelRoom.sol\":{\"keccak256\":\"0x8ff8dc8ff3c2688556a42f6a48fd8f8ef99c2721c5b91298d8f694ff8d0a6712\",\"urls\":[\"bzz-raw://d4ac8e75574f2b10aa57eee55f2728506073bb83fac554bcc44f82f740d87224\",\"dweb:/ipfs/QmdiifBmvrQvTEiQT8ctN5yNdJaTLxaQnno3t9EJJqvUXd\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5060008054610100600160a81b03191633610100021760ff1916815561027690819061003c90396000f3fe6080604052600436106100345760003560e01c806305a8da721461003957806306099d69146100435780638da5cb5b14610058575b600080fd5b610041610089565b005b34801561004f57600080fd5b506100416101ca565b34801561006457600080fd5b5061006d61022d565b604080516001600160a01b039092168252519081900360200190f35b6000805460ff16600181111561009b57fe5b146100e3576040805162461bcd60e51b815260206004820152601360248201527221bab93932b73a363c9027b1b1bab834b2b21760691b604482015290519081900360640190fd5b671bc16d674ec8000080341015610141576040805162461bcd60e51b815260206004820152601a60248201527f4e6f7420656e6f7567682045746865722070726f76696465642e000000000000604482015290519081900360640190fd5b6000805460ff19166001178082556040516101009091046001600160a01b0316916108fc34801591909102929091818181858888f1935050505015801561018c573d6000803e3d6000fd5b506040805133815234602082015281517fba951166d42eb077151bdecb7cf6027562f04f0143b0c141b1bb0a33eef5d693929181900390910190a150565b600160005460ff1660018111156101dd57fe5b14610221576040805162461bcd60e51b815260206004820152600f60248201526e20b63932b0b23c902b30b1b0b73a1760891b604482015290519081900360640190fd5b6000805460ff19169055565b60005461010090046001600160a01b03168156fea265627a7a723158207c73c7fecd5c57eb229b5094a8d3c73eae888da6127be9a1249cefa2efb28f3a64736f6c63430005100032",
+  "deployedBytecode": "0x6080604052600436106100345760003560e01c806305a8da721461003957806306099d69146100435780638da5cb5b14610058575b600080fd5b610041610089565b005b34801561004f57600080fd5b506100416101ca565b34801561006457600080fd5b5061006d61022d565b604080516001600160a01b039092168252519081900360200190f35b6000805460ff16600181111561009b57fe5b146100e3576040805162461bcd60e51b815260206004820152601360248201527221bab93932b73a363c9027b1b1bab834b2b21760691b604482015290519081900360640190fd5b671bc16d674ec8000080341015610141576040805162461bcd60e51b815260206004820152601a60248201527f4e6f7420656e6f7567682045746865722070726f76696465642e000000000000604482015290519081900360640190fd5b6000805460ff19166001178082556040516101009091046001600160a01b0316916108fc34801591909102929091818181858888f1935050505015801561018c573d6000803e3d6000fd5b506040805133815234602082015281517fba951166d42eb077151bdecb7cf6027562f04f0143b0c141b1bb0a33eef5d693929181900390910190a150565b600160005460ff1660018111156101dd57fe5b14610221576040805162461bcd60e51b815260206004820152600f60248201526e20b63932b0b23c902b30b1b0b73a1760891b604482015290519081900360640190fd5b6000805460ff19169055565b60005461010090046001600160a01b03168156fea265627a7a723158207c73c7fecd5c57eb229b5094a8d3c73eae888da6127be9a1249cefa2efb28f3a64736f6c63430005100032",
+  "sourceMap": "103:1363:0:-;;;273:135;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;347:5:0;:18;;-1:-1:-1;;;;;;347:18:0;355:10;347:18;;;-1:-1:-1;;372:31:0;;;103:1363;;;;;;;;",
+  "deployedSourceMap": "103:1363:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1043:328;;;:::i;:::-;;1375:86;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1375:86:0;;;:::i;191:28::-;;8:9:-1;5:2;;;30:1;27;20:12;5:2;191:28:0;;;:::i;:::-;;;;-1:-1:-1;;;;;191:28:0;;;;;;;;;;;;;;1043:328;649:15;632:13;;;;;:32;;;;;;;;624:64;;;;;-1:-1:-1;;;624:64:0;;;;;;;;;;;;-1:-1:-1;;;624:64:0;;;;;;;;;;;;;;;1096:7;503;490:9;:20;;482:59;;;;;-1:-1:-1;;;482:59:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;1111:13;:33;;-1:-1:-1;;1111:33:0;1127:17;1111:33;;;;1187:25;;:5;;;;-1:-1:-1;;;;;1187:5:0;;:25;1202:9;1187:25;;;;;;;1202:9;;1187:25;1111:13;1187:25;1202:9;1187:5;:25;;;;;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;-1:-1;1337:29:0;;;1344:10;1337:29;;1356:9;1337:29;;;;;;;;;;;;;;;;;694:1;1043:328::o;1375:86::-;797:17;780:13;;;;;:34;;;;;;;;772:62;;;;;-1:-1:-1;;;772:62:0;;;;;;;;;;;;-1:-1:-1;;;772:62:0;;;;;;;;;;;;;;;1441:15;1425:31;;-1:-1:-1;;1425:31:0;;;1375:86::o;191:28::-;;;;;;-1:-1:-1;;;;;191:28:0;;:::o",
+  "source": "pragma solidity ^0.5.16;\n\n// Ether - pay smart contracts\n// Modifiers\n// Visibility\n// Events\n// Enums\ncontract HotelRoom {\n\n  enum Statuses { Vacant, Occupied }\n  Statuses currentStatus;\n\n  address payable public owner;\n\n  event Occupy(address _occupant, uint _value);\n\n  constructor() public {\n    // The user who deploys the smart contract\n    owner = msg.sender;\n\n    currentStatus = Statuses.Vacant;\n  }\n\n  modifier costs(uint _amount) {\n    // Check price: should be true\n    require(msg.value >= _amount, \"Not enough Ether provided.\");\n    _;\n  }\n\n  modifier onlyWhileVacant {\n    // Check status: should be true\n    require(currentStatus == Statuses.Vacant, \"Currently Occupied.\");\n    _;\n  }\n\n  modifier onlyWhenOccupied {\n    // Check status: should be true\n    require(currentStatus == Statuses.Occupied, \"Already Vacant.\");\n    _;\n  }\n\n  // receive works in version >= 0.6.x \n  // acts as a fallback when just ether is sent to smart contract without any call data\n  // receive() external payable onlyWhileVacant costs(2 ether) {\n  function book() payable public onlyWhileVacant costs(2 ether) {\n    currentStatus = Statuses.Occupied;\n    // Send money to owner's account\n    owner.transfer(msg.value);\n\n    // Emits event that room is occupied\n    // Users can subscribe and listen for this event and do some action\n    emit Occupy(msg.sender, msg.value);\n  }\n\n  function checkout() public onlyWhenOccupied {\n    currentStatus = Statuses.Vacant;\n  }\n  \n}\n",
+  "sourcePath": "/home/robogod/Code/blockchain/master-solidity/contracts/HotelRoom.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/HotelRoom.sol",
+    "exportedSymbols": {
+      "HotelRoom": [
+        106
+      ]
+    },
+    "id": 107,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 106,
+        "linearizedBaseContracts": [
+          106
+        ],
+        "name": "HotelRoom",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "HotelRoom.Statuses",
+            "id": 4,
+            "members": [
+              {
+                "id": 2,
+                "name": "Vacant",
+                "nodeType": "EnumValue",
+                "src": "143:6:0"
+              },
+              {
+                "id": 3,
+                "name": "Occupied",
+                "nodeType": "EnumValue",
+                "src": "151:8:0"
+              }
+            ],
+            "name": "Statuses",
+            "nodeType": "EnumDefinition",
+            "src": "127:34:0"
+          },
+          {
+            "constant": false,
+            "id": 6,
+            "name": "currentStatus",
+            "nodeType": "VariableDeclaration",
+            "scope": 106,
+            "src": "164:22:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_enum$_Statuses_$4",
+              "typeString": "enum HotelRoom.Statuses"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 5,
+              "name": "Statuses",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 4,
+              "src": "164:8:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_enum$_Statuses_$4",
+                "typeString": "enum HotelRoom.Statuses"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 8,
+            "name": "owner",
+            "nodeType": "VariableDeclaration",
+            "scope": 106,
+            "src": "191:28:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address_payable",
+              "typeString": "address payable"
+            },
+            "typeName": {
+              "id": 7,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "191:15:0",
+              "stateMutability": "payable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address_payable",
+                "typeString": "address payable"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 14,
+            "name": "Occupy",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 13,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10,
+                  "indexed": false,
+                  "name": "_occupant",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14,
+                  "src": "237:17:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 9,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "237:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 12,
+                  "indexed": false,
+                  "name": "_value",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 14,
+                  "src": "256:11:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 11,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "256:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "236:32:0"
+            },
+            "src": "224:45:0"
+          },
+          {
+            "body": {
+              "id": 27,
+              "nodeType": "Block",
+              "src": "294:114:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 20,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 17,
+                      "name": "owner",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 8,
+                      "src": "347:5:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 18,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 121,
+                        "src": "355:3:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 19,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "355:10:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "347:18:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "id": 21,
+                  "nodeType": "ExpressionStatement",
+                  "src": "347:18:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 25,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 22,
+                      "name": "currentStatus",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6,
+                      "src": "372:13:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_Statuses_$4",
+                        "typeString": "enum HotelRoom.Statuses"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 23,
+                        "name": "Statuses",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4,
+                        "src": "388:8:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_enum$_Statuses_$4_$",
+                          "typeString": "type(enum HotelRoom.Statuses)"
+                        }
+                      },
+                      "id": 24,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "Vacant",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "388:15:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_Statuses_$4",
+                        "typeString": "enum HotelRoom.Statuses"
+                      }
+                    },
+                    "src": "372:31:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Statuses_$4",
+                      "typeString": "enum HotelRoom.Statuses"
+                    }
+                  },
+                  "id": 26,
+                  "nodeType": "ExpressionStatement",
+                  "src": "372:31:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 28,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 15,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "284:2:0"
+            },
+            "returnParameters": {
+              "id": 16,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "294:0:0"
+            },
+            "scope": 106,
+            "src": "273:135:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 41,
+              "nodeType": "Block",
+              "src": "441:112:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 36,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 33,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 121,
+                            "src": "490:3:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 34,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "value",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "490:9:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": ">=",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "id": 35,
+                          "name": "_amount",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 30,
+                          "src": "503:7:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "src": "490:20:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "4e6f7420656e6f7567682045746865722070726f76696465642e",
+                        "id": 37,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "512:28:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_01323d80d2a9cecc721958dfb0ebb355919f2565eeedca1f22d5abb8d9359b45",
+                          "typeString": "literal_string \"Not enough Ether provided.\""
+                        },
+                        "value": "Not enough Ether provided."
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_01323d80d2a9cecc721958dfb0ebb355919f2565eeedca1f22d5abb8d9359b45",
+                          "typeString": "literal_string \"Not enough Ether provided.\""
+                        }
+                      ],
+                      "id": 32,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        124,
+                        125
+                      ],
+                      "referencedDeclaration": 125,
+                      "src": "482:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 38,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "482:59:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 39,
+                  "nodeType": "ExpressionStatement",
+                  "src": "482:59:0"
+                },
+                {
+                  "id": 40,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "547:1:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 42,
+            "name": "costs",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 31,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 30,
+                  "name": "_amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 42,
+                  "src": "427:12:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 29,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "427:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "426:14:0"
+            },
+            "src": "412:141:0",
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 53,
+              "nodeType": "Block",
+              "src": "582:118:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_enum$_Statuses_$4",
+                          "typeString": "enum HotelRoom.Statuses"
+                        },
+                        "id": 48,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "id": 45,
+                          "name": "currentStatus",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 6,
+                          "src": "632:13:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_enum$_Statuses_$4",
+                            "typeString": "enum HotelRoom.Statuses"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 46,
+                            "name": "Statuses",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 4,
+                            "src": "649:8:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_enum$_Statuses_$4_$",
+                              "typeString": "type(enum HotelRoom.Statuses)"
+                            }
+                          },
+                          "id": 47,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "memberName": "Vacant",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "649:15:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_enum$_Statuses_$4",
+                            "typeString": "enum HotelRoom.Statuses"
+                          }
+                        },
+                        "src": "632:32:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "43757272656e746c79204f636375706965642e",
+                        "id": 49,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "666:21:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_66ac814891755b70c57a2db6f76de0afcecc112d2c7ec539db27140ed9b36120",
+                          "typeString": "literal_string \"Currently Occupied.\""
+                        },
+                        "value": "Currently Occupied."
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_66ac814891755b70c57a2db6f76de0afcecc112d2c7ec539db27140ed9b36120",
+                          "typeString": "literal_string \"Currently Occupied.\""
+                        }
+                      ],
+                      "id": 44,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        124,
+                        125
+                      ],
+                      "referencedDeclaration": 125,
+                      "src": "624:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 50,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "624:64:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 51,
+                  "nodeType": "ExpressionStatement",
+                  "src": "624:64:0"
+                },
+                {
+                  "id": 52,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "694:1:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 54,
+            "name": "onlyWhileVacant",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 43,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "582:0:0"
+            },
+            "src": "557:143:0",
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 65,
+              "nodeType": "Block",
+              "src": "730:116:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_enum$_Statuses_$4",
+                          "typeString": "enum HotelRoom.Statuses"
+                        },
+                        "id": 60,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "id": 57,
+                          "name": "currentStatus",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 6,
+                          "src": "780:13:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_enum$_Statuses_$4",
+                            "typeString": "enum HotelRoom.Statuses"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 58,
+                            "name": "Statuses",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 4,
+                            "src": "797:8:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_enum$_Statuses_$4_$",
+                              "typeString": "type(enum HotelRoom.Statuses)"
+                            }
+                          },
+                          "id": 59,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "memberName": "Occupied",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "797:17:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_enum$_Statuses_$4",
+                            "typeString": "enum HotelRoom.Statuses"
+                          }
+                        },
+                        "src": "780:34:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "416c726561647920566163616e742e",
+                        "id": 61,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "816:17:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_97622d10b2c779d975a3acb0cf39c168a7e989c5c4feccafd6945949a876926d",
+                          "typeString": "literal_string \"Already Vacant.\""
+                        },
+                        "value": "Already Vacant."
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_97622d10b2c779d975a3acb0cf39c168a7e989c5c4feccafd6945949a876926d",
+                          "typeString": "literal_string \"Already Vacant.\""
+                        }
+                      ],
+                      "id": 56,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        124,
+                        125
+                      ],
+                      "referencedDeclaration": 125,
+                      "src": "772:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 62,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "772:62:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 63,
+                  "nodeType": "ExpressionStatement",
+                  "src": "772:62:0"
+                },
+                {
+                  "id": 64,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "840:1:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 66,
+            "name": "onlyWhenOccupied",
+            "nodeType": "ModifierDefinition",
+            "parameters": {
+              "id": 55,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "730:0:0"
+            },
+            "src": "704:142:0",
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 93,
+              "nodeType": "Block",
+              "src": "1105:266:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 77,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 74,
+                      "name": "currentStatus",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6,
+                      "src": "1111:13:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_Statuses_$4",
+                        "typeString": "enum HotelRoom.Statuses"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 75,
+                        "name": "Statuses",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4,
+                        "src": "1127:8:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_enum$_Statuses_$4_$",
+                          "typeString": "type(enum HotelRoom.Statuses)"
+                        }
+                      },
+                      "id": 76,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "Occupied",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "1127:17:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_Statuses_$4",
+                        "typeString": "enum HotelRoom.Statuses"
+                      }
+                    },
+                    "src": "1111:33:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Statuses_$4",
+                      "typeString": "enum HotelRoom.Statuses"
+                    }
+                  },
+                  "id": 78,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1111:33:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 82,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 121,
+                          "src": "1202:3:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 83,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "value",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "1202:9:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 79,
+                        "name": "owner",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 8,
+                        "src": "1187:5:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      },
+                      "id": 81,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "transfer",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "1187:14:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_transfer_nonpayable$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256)"
+                      }
+                    },
+                    "id": 84,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1187:25:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 85,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1187:25:0"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 87,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 121,
+                          "src": "1344:3:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 88,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "1344:10:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 89,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 121,
+                          "src": "1356:3:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 90,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "value",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "1356:9:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address_payable",
+                          "typeString": "address payable"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 86,
+                      "name": "Occupy",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 14,
+                      "src": "1337:6:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_uint256_$returns$__$",
+                        "typeString": "function (address,uint256)"
+                      }
+                    },
+                    "id": 91,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1337:29:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 92,
+                  "nodeType": "EmitStatement",
+                  "src": "1332:34:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 94,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 69,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 68,
+                  "name": "onlyWhileVacant",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 54,
+                  "src": "1074:15:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1074:15:0"
+              },
+              {
+                "arguments": [
+                  {
+                    "argumentTypes": null,
+                    "hexValue": "32",
+                    "id": 71,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "number",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "1096:7:0",
+                    "subdenomination": "ether",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_rational_2000000000000000000_by_1",
+                      "typeString": "int_const 2000000000000000000"
+                    },
+                    "value": "2"
+                  }
+                ],
+                "id": 72,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 70,
+                  "name": "costs",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 42,
+                  "src": "1090:5:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$_t_uint256_$",
+                    "typeString": "modifier (uint256)"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1090:14:0"
+              }
+            ],
+            "name": "book",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 67,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1056:2:0"
+            },
+            "returnParameters": {
+              "id": 73,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1105:0:0"
+            },
+            "scope": 106,
+            "src": "1043:328:0",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 104,
+              "nodeType": "Block",
+              "src": "1419:42:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 102,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 99,
+                      "name": "currentStatus",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6,
+                      "src": "1425:13:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_Statuses_$4",
+                        "typeString": "enum HotelRoom.Statuses"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 100,
+                        "name": "Statuses",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4,
+                        "src": "1441:8:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_enum$_Statuses_$4_$",
+                          "typeString": "type(enum HotelRoom.Statuses)"
+                        }
+                      },
+                      "id": 101,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "Vacant",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "1441:15:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_Statuses_$4",
+                        "typeString": "enum HotelRoom.Statuses"
+                      }
+                    },
+                    "src": "1425:31:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_Statuses_$4",
+                      "typeString": "enum HotelRoom.Statuses"
+                    }
+                  },
+                  "id": 103,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1425:31:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 105,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 97,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 96,
+                  "name": "onlyWhenOccupied",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 66,
+                  "src": "1402:16:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1402:16:0"
+              }
+            ],
+            "name": "checkout",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 95,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1392:2:0"
+            },
+            "returnParameters": {
+              "id": 98,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1419:0:0"
+            },
+            "scope": 106,
+            "src": "1375:86:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 107,
+        "src": "103:1363:0"
+      }
+    ],
+    "src": "0:1467:0"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/HotelRoom.sol",
+      "exportedSymbols": {
+        "HotelRoom": [
+          106
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.5",
+            ".16"
+          ]
+        },
+        "id": 1,
+        "name": "PragmaDirective",
+        "src": "0:24:0"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            106
+          ],
+          "name": "HotelRoom",
+          "scope": 107
+        },
+        "children": [
+          {
+            "attributes": {
+              "canonicalName": "HotelRoom.Statuses",
+              "name": "Statuses"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "Vacant"
+                },
+                "id": 2,
+                "name": "EnumValue",
+                "src": "143:6:0"
+              },
+              {
+                "attributes": {
+                  "name": "Occupied"
+                },
+                "id": 3,
+                "name": "EnumValue",
+                "src": "151:8:0"
+              }
+            ],
+            "id": 4,
+            "name": "EnumDefinition",
+            "src": "127:34:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "currentStatus",
+              "scope": 106,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "enum HotelRoom.Statuses",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "Statuses",
+                  "referencedDeclaration": 4,
+                  "type": "enum HotelRoom.Statuses"
+                },
+                "id": 5,
+                "name": "UserDefinedTypeName",
+                "src": "164:8:0"
+              }
+            ],
+            "id": 6,
+            "name": "VariableDeclaration",
+            "src": "164:22:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "owner",
+              "scope": 106,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "address payable",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "address",
+                  "stateMutability": "payable",
+                  "type": "address payable"
+                },
+                "id": 7,
+                "name": "ElementaryTypeName",
+                "src": "191:15:0"
+              }
+            ],
+            "id": 8,
+            "name": "VariableDeclaration",
+            "src": "191:28:0"
+          },
+          {
+            "attributes": {
+              "anonymous": false,
+              "documentation": null,
+              "name": "Occupy"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "_occupant",
+                      "scope": 14,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 9,
+                        "name": "ElementaryTypeName",
+                        "src": "237:7:0"
+                      }
+                    ],
+                    "id": 10,
+                    "name": "VariableDeclaration",
+                    "src": "237:17:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "_value",
+                      "scope": 14,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 11,
+                        "name": "ElementaryTypeName",
+                        "src": "256:4:0"
+                      }
+                    ],
+                    "id": 12,
+                    "name": "VariableDeclaration",
+                    "src": "256:11:0"
+                  }
+                ],
+                "id": 13,
+                "name": "ParameterList",
+                "src": "236:32:0"
+              }
+            ],
+            "id": 14,
+            "name": "EventDefinition",
+            "src": "224:45:0"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": true,
+              "kind": "constructor",
+              "modifiers": [
+                null
+              ],
+              "name": "",
+              "scope": 106,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 15,
+                "name": "ParameterList",
+                "src": "284:2:0"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 16,
+                "name": "ParameterList",
+                "src": "294:0:0"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "address payable"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 8,
+                              "type": "address payable",
+                              "value": "owner"
+                            },
+                            "id": 17,
+                            "name": "Identifier",
+                            "src": "347:5:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "sender",
+                              "referencedDeclaration": null,
+                              "type": "address payable"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 121,
+                                  "type": "msg",
+                                  "value": "msg"
+                                },
+                                "id": 18,
+                                "name": "Identifier",
+                                "src": "355:3:0"
+                              }
+                            ],
+                            "id": 19,
+                            "name": "MemberAccess",
+                            "src": "355:10:0"
+                          }
+                        ],
+                        "id": 20,
+                        "name": "Assignment",
+                        "src": "347:18:0"
+                      }
+                    ],
+                    "id": 21,
+                    "name": "ExpressionStatement",
+                    "src": "347:18:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "enum HotelRoom.Statuses"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 6,
+                              "type": "enum HotelRoom.Statuses",
+                              "value": "currentStatus"
+                            },
+                            "id": 22,
+                            "name": "Identifier",
+                            "src": "372:13:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "member_name": "Vacant",
+                              "referencedDeclaration": null,
+                              "type": "enum HotelRoom.Statuses"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 4,
+                                  "type": "type(enum HotelRoom.Statuses)",
+                                  "value": "Statuses"
+                                },
+                                "id": 23,
+                                "name": "Identifier",
+                                "src": "388:8:0"
+                              }
+                            ],
+                            "id": 24,
+                            "name": "MemberAccess",
+                            "src": "388:15:0"
+                          }
+                        ],
+                        "id": 25,
+                        "name": "Assignment",
+                        "src": "372:31:0"
+                      }
+                    ],
+                    "id": 26,
+                    "name": "ExpressionStatement",
+                    "src": "372:31:0"
+                  }
+                ],
+                "id": 27,
+                "name": "Block",
+                "src": "294:114:0"
+              }
+            ],
+            "id": 28,
+            "name": "FunctionDefinition",
+            "src": "273:135:0"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "name": "costs",
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_amount",
+                      "scope": 42,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 29,
+                        "name": "ElementaryTypeName",
+                        "src": "427:4:0"
+                      }
+                    ],
+                    "id": 30,
+                    "name": "VariableDeclaration",
+                    "src": "427:12:0"
+                  }
+                ],
+                "id": 31,
+                "name": "ParameterList",
+                "src": "426:14:0"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                },
+                                {
+                                  "typeIdentifier": "t_stringliteral_01323d80d2a9cecc721958dfb0ebb355919f2565eeedca1f22d5abb8d9359b45",
+                                  "typeString": "literal_string \"Not enough Ether provided.\""
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                124,
+                                125
+                              ],
+                              "referencedDeclaration": 125,
+                              "type": "function (bool,string memory) pure",
+                              "value": "require"
+                            },
+                            "id": 32,
+                            "name": "Identifier",
+                            "src": "482:7:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "commonType": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": ">=",
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "value",
+                                  "referencedDeclaration": null,
+                                  "type": "uint256"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 121,
+                                      "type": "msg",
+                                      "value": "msg"
+                                    },
+                                    "id": 33,
+                                    "name": "Identifier",
+                                    "src": "490:3:0"
+                                  }
+                                ],
+                                "id": 34,
+                                "name": "MemberAccess",
+                                "src": "490:9:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 30,
+                                  "type": "uint256",
+                                  "value": "_amount"
+                                },
+                                "id": 35,
+                                "name": "Identifier",
+                                "src": "503:7:0"
+                              }
+                            ],
+                            "id": 36,
+                            "name": "BinaryOperation",
+                            "src": "490:20:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "4e6f7420656e6f7567682045746865722070726f76696465642e",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "string",
+                              "type": "literal_string \"Not enough Ether provided.\"",
+                              "value": "Not enough Ether provided."
+                            },
+                            "id": 37,
+                            "name": "Literal",
+                            "src": "512:28:0"
+                          }
+                        ],
+                        "id": 38,
+                        "name": "FunctionCall",
+                        "src": "482:59:0"
+                      }
+                    ],
+                    "id": 39,
+                    "name": "ExpressionStatement",
+                    "src": "482:59:0"
+                  },
+                  {
+                    "id": 40,
+                    "name": "PlaceholderStatement",
+                    "src": "547:1:0"
+                  }
+                ],
+                "id": 41,
+                "name": "Block",
+                "src": "441:112:0"
+              }
+            ],
+            "id": 42,
+            "name": "ModifierDefinition",
+            "src": "412:141:0"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "name": "onlyWhileVacant",
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 43,
+                "name": "ParameterList",
+                "src": "582:0:0"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                },
+                                {
+                                  "typeIdentifier": "t_stringliteral_66ac814891755b70c57a2db6f76de0afcecc112d2c7ec539db27140ed9b36120",
+                                  "typeString": "literal_string \"Currently Occupied.\""
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                124,
+                                125
+                              ],
+                              "referencedDeclaration": 125,
+                              "type": "function (bool,string memory) pure",
+                              "value": "require"
+                            },
+                            "id": 44,
+                            "name": "Identifier",
+                            "src": "624:7:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "commonType": {
+                                "typeIdentifier": "t_enum$_Statuses_$4",
+                                "typeString": "enum HotelRoom.Statuses"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "==",
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 6,
+                                  "type": "enum HotelRoom.Statuses",
+                                  "value": "currentStatus"
+                                },
+                                "id": 45,
+                                "name": "Identifier",
+                                "src": "632:13:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "member_name": "Vacant",
+                                  "referencedDeclaration": null,
+                                  "type": "enum HotelRoom.Statuses"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 4,
+                                      "type": "type(enum HotelRoom.Statuses)",
+                                      "value": "Statuses"
+                                    },
+                                    "id": 46,
+                                    "name": "Identifier",
+                                    "src": "649:8:0"
+                                  }
+                                ],
+                                "id": 47,
+                                "name": "MemberAccess",
+                                "src": "649:15:0"
+                              }
+                            ],
+                            "id": 48,
+                            "name": "BinaryOperation",
+                            "src": "632:32:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "43757272656e746c79204f636375706965642e",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "string",
+                              "type": "literal_string \"Currently Occupied.\"",
+                              "value": "Currently Occupied."
+                            },
+                            "id": 49,
+                            "name": "Literal",
+                            "src": "666:21:0"
+                          }
+                        ],
+                        "id": 50,
+                        "name": "FunctionCall",
+                        "src": "624:64:0"
+                      }
+                    ],
+                    "id": 51,
+                    "name": "ExpressionStatement",
+                    "src": "624:64:0"
+                  },
+                  {
+                    "id": 52,
+                    "name": "PlaceholderStatement",
+                    "src": "694:1:0"
+                  }
+                ],
+                "id": 53,
+                "name": "Block",
+                "src": "582:118:0"
+              }
+            ],
+            "id": 54,
+            "name": "ModifierDefinition",
+            "src": "557:143:0"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "name": "onlyWhenOccupied",
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 55,
+                "name": "ParameterList",
+                "src": "730:0:0"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                },
+                                {
+                                  "typeIdentifier": "t_stringliteral_97622d10b2c779d975a3acb0cf39c168a7e989c5c4feccafd6945949a876926d",
+                                  "typeString": "literal_string \"Already Vacant.\""
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                124,
+                                125
+                              ],
+                              "referencedDeclaration": 125,
+                              "type": "function (bool,string memory) pure",
+                              "value": "require"
+                            },
+                            "id": 56,
+                            "name": "Identifier",
+                            "src": "772:7:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "commonType": {
+                                "typeIdentifier": "t_enum$_Statuses_$4",
+                                "typeString": "enum HotelRoom.Statuses"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "==",
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 6,
+                                  "type": "enum HotelRoom.Statuses",
+                                  "value": "currentStatus"
+                                },
+                                "id": 57,
+                                "name": "Identifier",
+                                "src": "780:13:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "member_name": "Occupied",
+                                  "referencedDeclaration": null,
+                                  "type": "enum HotelRoom.Statuses"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 4,
+                                      "type": "type(enum HotelRoom.Statuses)",
+                                      "value": "Statuses"
+                                    },
+                                    "id": 58,
+                                    "name": "Identifier",
+                                    "src": "797:8:0"
+                                  }
+                                ],
+                                "id": 59,
+                                "name": "MemberAccess",
+                                "src": "797:17:0"
+                              }
+                            ],
+                            "id": 60,
+                            "name": "BinaryOperation",
+                            "src": "780:34:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "416c726561647920566163616e742e",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "string",
+                              "type": "literal_string \"Already Vacant.\"",
+                              "value": "Already Vacant."
+                            },
+                            "id": 61,
+                            "name": "Literal",
+                            "src": "816:17:0"
+                          }
+                        ],
+                        "id": 62,
+                        "name": "FunctionCall",
+                        "src": "772:62:0"
+                      }
+                    ],
+                    "id": 63,
+                    "name": "ExpressionStatement",
+                    "src": "772:62:0"
+                  },
+                  {
+                    "id": 64,
+                    "name": "PlaceholderStatement",
+                    "src": "840:1:0"
+                  }
+                ],
+                "id": 65,
+                "name": "Block",
+                "src": "730:116:0"
+              }
+            ],
+            "id": 66,
+            "name": "ModifierDefinition",
+            "src": "704:142:0"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "name": "book",
+              "scope": 106,
+              "stateMutability": "payable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 67,
+                "name": "ParameterList",
+                "src": "1056:2:0"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 73,
+                "name": "ParameterList",
+                "src": "1105:0:0"
+              },
+              {
+                "attributes": {
+                  "arguments": null
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 54,
+                      "type": "modifier ()",
+                      "value": "onlyWhileVacant"
+                    },
+                    "id": 68,
+                    "name": "Identifier",
+                    "src": "1074:15:0"
+                  }
+                ],
+                "id": 69,
+                "name": "ModifierInvocation",
+                "src": "1074:15:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 42,
+                      "type": "modifier (uint256)",
+                      "value": "costs"
+                    },
+                    "id": 70,
+                    "name": "Identifier",
+                    "src": "1090:5:0"
+                  },
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "hexvalue": "32",
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "subdenomination": "ether",
+                      "token": "number",
+                      "type": "int_const 2000000000000000000",
+                      "value": "2"
+                    },
+                    "id": 71,
+                    "name": "Literal",
+                    "src": "1096:7:0"
+                  }
+                ],
+                "id": 72,
+                "name": "ModifierInvocation",
+                "src": "1090:14:0"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "enum HotelRoom.Statuses"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 6,
+                              "type": "enum HotelRoom.Statuses",
+                              "value": "currentStatus"
+                            },
+                            "id": 74,
+                            "name": "Identifier",
+                            "src": "1111:13:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "member_name": "Occupied",
+                              "referencedDeclaration": null,
+                              "type": "enum HotelRoom.Statuses"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 4,
+                                  "type": "type(enum HotelRoom.Statuses)",
+                                  "value": "Statuses"
+                                },
+                                "id": 75,
+                                "name": "Identifier",
+                                "src": "1127:8:0"
+                              }
+                            ],
+                            "id": 76,
+                            "name": "MemberAccess",
+                            "src": "1127:17:0"
+                          }
+                        ],
+                        "id": 77,
+                        "name": "Assignment",
+                        "src": "1111:33:0"
+                      }
+                    ],
+                    "id": 78,
+                    "name": "ExpressionStatement",
+                    "src": "1111:33:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "transfer",
+                              "referencedDeclaration": null,
+                              "type": "function (uint256)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 8,
+                                  "type": "address payable",
+                                  "value": "owner"
+                                },
+                                "id": 79,
+                                "name": "Identifier",
+                                "src": "1187:5:0"
+                              }
+                            ],
+                            "id": 81,
+                            "name": "MemberAccess",
+                            "src": "1187:14:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "value",
+                              "referencedDeclaration": null,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 121,
+                                  "type": "msg",
+                                  "value": "msg"
+                                },
+                                "id": 82,
+                                "name": "Identifier",
+                                "src": "1202:3:0"
+                              }
+                            ],
+                            "id": 83,
+                            "name": "MemberAccess",
+                            "src": "1202:9:0"
+                          }
+                        ],
+                        "id": 84,
+                        "name": "FunctionCall",
+                        "src": "1187:25:0"
+                      }
+                    ],
+                    "id": 85,
+                    "name": "ExpressionStatement",
+                    "src": "1187:25:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address_payable",
+                                  "typeString": "address payable"
+                                },
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 14,
+                              "type": "function (address,uint256)",
+                              "value": "Occupy"
+                            },
+                            "id": 86,
+                            "name": "Identifier",
+                            "src": "1337:6:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "sender",
+                              "referencedDeclaration": null,
+                              "type": "address payable"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 121,
+                                  "type": "msg",
+                                  "value": "msg"
+                                },
+                                "id": 87,
+                                "name": "Identifier",
+                                "src": "1344:3:0"
+                              }
+                            ],
+                            "id": 88,
+                            "name": "MemberAccess",
+                            "src": "1344:10:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "value",
+                              "referencedDeclaration": null,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 121,
+                                  "type": "msg",
+                                  "value": "msg"
+                                },
+                                "id": 89,
+                                "name": "Identifier",
+                                "src": "1356:3:0"
+                              }
+                            ],
+                            "id": 90,
+                            "name": "MemberAccess",
+                            "src": "1356:9:0"
+                          }
+                        ],
+                        "id": 91,
+                        "name": "FunctionCall",
+                        "src": "1337:29:0"
+                      }
+                    ],
+                    "id": 92,
+                    "name": "EmitStatement",
+                    "src": "1332:34:0"
+                  }
+                ],
+                "id": 93,
+                "name": "Block",
+                "src": "1105:266:0"
+              }
+            ],
+            "id": 94,
+            "name": "FunctionDefinition",
+            "src": "1043:328:0"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "name": "checkout",
+              "scope": 106,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 95,
+                "name": "ParameterList",
+                "src": "1392:2:0"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 98,
+                "name": "ParameterList",
+                "src": "1419:0:0"
+              },
+              {
+                "attributes": {
+                  "arguments": null
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 66,
+                      "type": "modifier ()",
+                      "value": "onlyWhenOccupied"
+                    },
+                    "id": 96,
+                    "name": "Identifier",
+                    "src": "1402:16:0"
+                  }
+                ],
+                "id": 97,
+                "name": "ModifierInvocation",
+                "src": "1402:16:0"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "enum HotelRoom.Statuses"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 6,
+                              "type": "enum HotelRoom.Statuses",
+                              "value": "currentStatus"
+                            },
+                            "id": 99,
+                            "name": "Identifier",
+                            "src": "1425:13:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "member_name": "Vacant",
+                              "referencedDeclaration": null,
+                              "type": "enum HotelRoom.Statuses"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 4,
+                                  "type": "type(enum HotelRoom.Statuses)",
+                                  "value": "Statuses"
+                                },
+                                "id": 100,
+                                "name": "Identifier",
+                                "src": "1441:8:0"
+                              }
+                            ],
+                            "id": 101,
+                            "name": "MemberAccess",
+                            "src": "1441:15:0"
+                          }
+                        ],
+                        "id": 102,
+                        "name": "Assignment",
+                        "src": "1425:31:0"
+                      }
+                    ],
+                    "id": 103,
+                    "name": "ExpressionStatement",
+                    "src": "1425:31:0"
+                  }
+                ],
+                "id": 104,
+                "name": "Block",
+                "src": "1419:42:0"
+              }
+            ],
+            "id": 105,
+            "name": "FunctionDefinition",
+            "src": "1375:86:0"
+          }
+        ],
+        "id": 106,
+        "name": "ContractDefinition",
+        "src": "103:1363:0"
+      }
+    ],
+    "id": 107,
+    "name": "SourceUnit",
+    "src": "0:1467:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0xFe989f89e60fefA405C4515a8956B45078708cA1",
+      "transactionHash": "0xc562dca156070b0c24d3028c0b3155251eb33f11169a502fbc6647be7c9cda6e"
+    }
+  },
+  "schemaVersion": "3.4.4",
+  "updatedAt": "2022-01-30T07:20:48.569Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
