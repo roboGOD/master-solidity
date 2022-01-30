@@ -25,3 +25,10 @@ await myContract.addBook(102, "Atomic Habits", "James Clear");
 await myContract.addMyBook(101, "Psychology of Money", "Morgan Housel");
 (await myContract.books(101)).title;
 (await myContract.myBooks(accounts[0], 101)).title;
+
+// Conditionals and loops
+await myContract.isEvenNumber(10);
+await myContract.isEvenNumber(11);
+(await myContract.countEvenNumbers()).toNumber();
+await myContract.isOwner();
+await myContract.isOwner({from: accounts[1]});

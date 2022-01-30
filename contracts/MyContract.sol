@@ -8,6 +8,7 @@ contract MyContract {
   uint8 public myUint8 = 1;
   string public myString = "Hello, World!";
   address public myAddress = 0x5A0B54d5Dc17e0aADc38d3d2Db43B0A003E029c4;
+  address public owner;
 
   // Custom Type
   struct MyStruct {
@@ -42,6 +43,7 @@ contract MyContract {
 
   constructor() public {
     mappingInit();
+    owner = msg.sender;
   } 
 
   function mappingInit() private {
@@ -69,5 +71,33 @@ contract MyContract {
   // Add book to only my address
   function addMyBook(uint _id, string memory _title, string memory _author) public {
     myBooks[msg.sender][_id] = Book(_id, _title, _author);
+  }
+
+  // Conditionals
+  function isEvenNumber(uint _number) public pure returns(string memory) {
+    if(_number % 2 == 0) {
+      return "Yeah!";
+    } else {
+      return "Nope!";
+    }
+  }
+
+  // Loops
+  uint[] public numbers = [1, 2, 4, 5, 6, 20, 22, 25];
+  
+  function countEvenNumbers() public view returns (uint) {
+    uint count = 0;
+
+    for(uint i=0; i < numbers.length; i++) {
+      if(numbers[i] % 2 == 0) {
+        count++;
+      }
+    }
+
+    return count;
+  }
+
+  function isOwner() public view returns (bool) {
+    return (msg.sender == owner);
   }
 }
